@@ -16,19 +16,19 @@ public class MainActivity extends AppCompatActivity {
 
         VideoView videoView = findViewById(R.id.videoView);
 
-//
-//        String pathVideo = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
-//
-//        Uri videoUri = Uri.parse(pathVideo);
-        String vidAddress = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
-        Uri vidUri = Uri.parse(vidAddress);
-        videoView.setVideoURI(vidUri);
 
-//        MediaController mediaController = new MediaController(this);
-//
-//        mediaController.setAnchorView(videoView);
-//
-//        videoView.setMediaController(mediaController);
+        String pathVideo = "http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4";
+//        String pathVideo = "https://archive.org/download/ksnn_compilation_master_the_internet/ksnn_compilation_master_the_internet_512kb.mp4";
+
+        Uri videoUri = Uri.parse(pathVideo);
+
+        videoView.setVideoURI(videoUri);
+
+        MediaController mediaController = new MediaController(this);
+
+        mediaController.setAnchorView(videoView);
+
+        videoView.setMediaController(mediaController);
 
         videoView.start();
 
